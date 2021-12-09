@@ -4,7 +4,6 @@ void main() {
 	int a = 0;
 	do
 	{
-
 		int n;
 		n = 1;
 		printf("Enter any number between 1 and 99: ");
@@ -13,7 +12,7 @@ void main() {
 		if (n < 99 && n>1)
 		{
 			for (int i = 1; i < 10; i++)
-				printf("&n x %d = %d\n", i, i * n);
+				printf("%d x %d = %d\n", n, i, i * n);
 			a = 1;
 		}
 		else
@@ -21,8 +20,6 @@ void main() {
 			printf("Type in a correct number between 1 and 99! \n");
 			printf("Try again! ");
 		}
-
-
 	}
-		while (a != 1);
-	
+		while (a != 1); 
+}
