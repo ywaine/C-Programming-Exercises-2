@@ -1,23 +1,27 @@
-/*7. User enters any integer number. System tells whether this number is a prime number or not*/
 #include <stdio.h>
-
 int main() {
-  int n, i, c = 0;
-  printf("Enter any integer number :");
-  scanf_s("%d", &n);
+	int n, i, r = 0;
+	printf("Enter any integer number : ");
+	scanf_s("%d", &n);
 
-  //logic
-  for (i = 1; i <= n; i++) {
-	  if (n % i == 0) {
-		 c++;
-	  }
-  }
+	for (i = 2; i <= n / 2; ++i) {
+		// condition for non-prime
+		if (n % i == 0) {
+			r = 1;
+			break;
+		}
+	}
 
-  if (c == 2) {
-  printf("n is a Prime number");
-  }
-  else {
-  printf("n is not a Prime number");
-  }
-  return 0;
+	if (n == 1) {
+		printf("1 is neither prime nor composite.");
+	}
+	
+	else {
+		if (r == 0)
+			printf("%d is a prime number.", n);
+		else
+			printf("%d is not a prime number.", n);
+	}
+
+	return 0;
 }
