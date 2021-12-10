@@ -11,8 +11,7 @@ void main() {
 	    	    printf("Your input is incorrect please restart the program");
 
 	    	   }else{
-	    	       
-	    	do{
+	    do{
 	    int printMultiplicationTable(int n);
 		a = printMultiplicationTable(n);
 	    	} while (a != 1);
@@ -28,10 +27,4 @@ int printMultiplicationTable(int n){
 			for (int i = 1; i < 10; i++)
 				printf("%d x %d = %d\n", n, i, i * n);
 		return a = 1;
-		}
-		else
-		{
-			printf("Type in a correct number between 1 and 99! \n");
-			printf("Try again! ");
-		}
 }

@@ -1,5 +1,6 @@
 #include <stdio.h>
 int main() {
+
 	int n, output;
 	printf("Enter any integer number : ");
 	int isInt = scanf("%i", &n);
@@ -26,6 +27,4 @@ int primeCheck(int n){
 			break;
 		}
 	}
-
-	
 }

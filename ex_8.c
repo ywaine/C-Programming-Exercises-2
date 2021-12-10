@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 void main() {
+
 	char o;
 	printf("You can play Rock Paper Scissors game \n");
 	int a;
@@ -13,10 +14,10 @@ void main() {
 
 	while (a != 1)
 	{
-
 		scanf("%c", &o);
 		getchar();
 		
+
 		switch (o)
 		{
 		case 'R':
@@ -53,3 +54,4 @@ void main() {
 		}
 	}
 }
+
