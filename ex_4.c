@@ -1,23 +1,29 @@
-#include<stdio.h>
+#include <stdio.h>
 
-float main()
+
+void main()
 
 {
 
-	float a, b, c, sum;
+	float a, b, c, d;
 
-	float d;
-	
 	printf("Please enter 3 real numbers :");
 
-	scanf_s("%f%f%f", &a, &b, &c);
-
-	sum = a + b + c;
-
-	d = (a + b + c) / 3;
-
+	scanf("%f%f%f", &a, &b, &c);
+	
+	float averageCalculate(float a, float b, float c);
+	
+  d = averageCalculate(a,b,c);
+	
 	printf("\nThe average is %f", d);
 
-	return 0;
+}
+
+float averageCalculate(float a, float b, float c){
+    float sum = a + b + c;
+
+	float d = (a + b + c) / 3;
+	
+	return d;
 
 }

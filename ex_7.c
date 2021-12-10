@@ -1,27 +1,30 @@
 #include <stdio.h>
 int main() {
-	int n, i, r = 0;
-	printf("Enter any integer number : ");
-	scanf_s("%d", &n);
 
-	for (i = 2; i <= n / 2; ++i) {
-		// condition for non-prime
+	int n, output;
+	printf("Enter any integer number : ");
+	int isInt = scanf("%i", &n);
+	if(isInt==0){
+	    printf("Please enter a valid integer number: ");
+	    return 0;
+	}
+    int primeCheck(int n);
+    output = primeCheck(n);
+
+		if(output == 1){
+			printf("%i is a prime number.", n);
+		}else if(output == 0){
+			printf("%i is not a prime number.", n);
+		}
+}
+
+int primeCheck(int n){
+    
+	for (int i = 2; i <= n / 2; i++) {
+		// condition for prime
 		if (n % i == 0) {
-			r = 1;
+			return 1;
 			break;
 		}
 	}
-
-	if (n == 1) {
-		printf("1 is neither prime nor composite.");
-	}
-	
-	else {
-		if (r == 0)
-			printf("%d is a prime number.", n);
-		else
-			printf("%d is not a prime number.", n);
-	}
-
-	return 0;
 }

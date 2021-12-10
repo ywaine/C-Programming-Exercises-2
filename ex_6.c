@@ -2,24 +2,29 @@
 #include <stdio.h>
 void main() {
 	int a = 0;
-	do
-	{
-		int n;
-		n = 1;
-		printf("Enter any number between 1 and 99: ");
-		scanf_s("%d", &n);
+	int n;
+	int isInt;
+// 		n = 1;
+	    printf("Enter any number between 1 and 99: ");
+		isInt = scanf("%d", &n);
+	    	if(isInt == 0){
+	    	    printf("Your input is incorrect please restart the program");
 
-		if (n < 99 && n>1)
+	    	   }else{
+	    do{
+	    int printMultiplicationTable(int n);
+		a = printMultiplicationTable(n);
+	    	} while (a != 1);
+		
+	}
+		 
+}
+
+int printMultiplicationTable(int n){
+    int a;
+    	if (n < 99 && n>1)
 		{
 			for (int i = 1; i < 10; i++)
 				printf("%d x %d = %d\n", n, i, i * n);
-			a = 1;
-		}
-		else
-		{
-			printf("Type in a correct number between 1 and 99! \n");
-			printf("Try again! ");
-		}
-	}
-		while (a != 1); 
+		return a = 1;
 }

@@ -1,13 +1,8 @@
-#include <cstdlib>
-# include <stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 void main() {
-	char R;
-	char r;
-	char P;
-	char p;
-	char S;
-	char s;
+
 	char o;
 	printf("You can play Rock Paper Scissors game \n");
 	int a;
@@ -19,8 +14,9 @@ void main() {
 
 	while (a != 1)
 	{
-
-		scanf_s("%c", &o);getchar();
+		scanf("%c", &o);
+		getchar();
+		
 
 		switch (o)
 		{
@@ -58,4 +54,4 @@ void main() {
 		}
 	}
 }
-	
+
