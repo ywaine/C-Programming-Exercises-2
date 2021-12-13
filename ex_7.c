@@ -1,27 +1,44 @@
 #include <stdio.h>
+int i, flag = 0;
+int n = 0;
+int primec(int n);
+bool b;
+
 int main() {
-	int n, i, r = 0;
-	printf("Enter any integer number : ");
+
+	printf("Enter any integer number: ");
 	scanf_s("%d", &n);
+	bool b = primec(n);
+	if(b==true)
+	{
+		printf("%d is a prime number.", n);
+	}else
+	{
+		printf("%d is not a prime number.", n);
+	}
+}
 
-	for (i = 2; i <= n / 2; ++i) {
-		// condition for non-prime
-		if (n % i == 0) {
-			r = 1;
-			break;
+int primec(int n) {
+		bool d = false;
+		for (i = 2; i <= n / 2; ++i) {
+			// condition for non-prime
+			if (n % i == 0) {
+				flag = 1;
+				break;
+			}
 		}
-	}
 
-	if (n == 1) {
-		printf("1 is neither prime nor composite.");
-	}
-	
-	else {
-		if (r == 0)
-			printf("%d is a prime number.", n);
-		else
-			printf("%d is not a prime number.", n);
-	}
+		if (n == 1) {
+			d = false;
+		}
+		else {
+			if (flag == 0) {
+				d = true;
+			}
+			else {
+				d = false;
+			}
 
-	return 0;
+		}
+		return d;
 }
