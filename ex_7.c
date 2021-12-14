@@ -1,44 +1,34 @@
 #include <stdio.h>
-int i, flag = 0;
-int n = 0;
-int primec(int n);
-bool b;
 
 int main() {
-
+  int n;
 	printf("Enter any integer number: ");
-	scanf_s("%d", &n);
-	bool b = primec(n);
-	if(b==true)
+	scanf("%d", &n);
+	int primec(int n);
+	int b = primec(n);
+	if(b==1)
 	{
 		printf("%d is a prime number.", n);
-	}else
+	}else if(b==0)
 	{
 		printf("%d is not a prime number.", n);
 	}
 }
 
 int primec(int n) {
-		bool d = false;
-		for (i = 2; i <= n / 2; ++i) {
+		int d = 1;
+		if (n == 1) {
+		    d = 1;
+			return d;
+		}
+		
+		for (int i = 2; i < n; i++) {
 			// condition for non-prime
 			if (n % i == 0) {
-				flag = 1;
-				break;
+			    d = 0;
+				return d;
 			}
-		}
-
-		if (n == 1) {
-			d = false;
-		}
-		else {
-			if (flag == 0) {
-				d = true;
-			}
-			else {
-				d = false;
-			}
-
 		}
 		return d;
+
 }
