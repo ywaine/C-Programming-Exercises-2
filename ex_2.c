@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main()
 {
+
 	int intg, summ = 0, i;
 	printf("integer = ");
 	scanf("%d", &intg);

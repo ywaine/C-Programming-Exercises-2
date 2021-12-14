@@ -1,36 +1,27 @@
+/*5. Print common multiples of 3 and 7 btw 1 to n which is entered by user */
 #include <stdio.h>
-int var3;
-int var7;
 
-int main(){
-    int input, zero;
-    var3 = 3;
-    var7 = 7;
-    
-    printf("Please enter an integer: ");
-    int isInt = scanf("%i", &input);
-    
-    if(isInt==0){
-        printf("Invalid input: Please make sure your input is an integer.");
-        return 0;
-    }else{
-        int a=1;
-        printf("All common multiples of 3 & 7 between 1 & %i are: \n", input);
-    do{
-        if(a%var3==0 && a%var7==0){
-           printf("%i. \n", a);
-           zero = 0;
-        }else{
-            zero = 1;
-          //printf("%i is not a multiple of 3 or 7. \n", a);
-        }
-        
-        a++;
-    }while(a < input);
-    
-    if(a<21){
-        printf("There are none.");
-    }
-    return zero;
-    }
+	int a = 3;
+	int b = 7;
+	
+int main()
+{
+	int i, n, c = 0;
+	printf("Enter any integer number: ");
+	scanf("%d", &n);
+	printf("The common multiples between 1 and %i are: \n", n);
+	for (i = 1; i < n; i++) {
+		//conditional statement: if i/21 has no reminder
+		if (i % (a*b) == 0) {
+			printf("%d\n", i);
+			c = +1;
+		}
+	}
+	if (c==0)
+	{
+		printf("There is no common multiple between 1 and %d \n", n);
+	    return 1;
+	    
+	}
+	return 0
 }
