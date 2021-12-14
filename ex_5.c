@@ -3,12 +3,11 @@ int var3;
 int var7;
 
 int main(){
-    int input;
-    int zero;
+    int input, zero;
     var3 = 3;
     var7 = 7;
     
-    printf("Please enter an integer:");
+    printf("Please enter an integer: ");
     int isInt = scanf("%i", &input);
     
     if(isInt==0){
@@ -23,14 +22,15 @@ int main(){
            zero = 0;
         }else{
             zero = 1;
-        //  printf("%i is not a multiple of 3 or 7. \n",a);
+          //printf("%i is not a multiple of 3 or 7. \n", a);
         }
         
         a++;
     }while(a < input);
     
-    if(zero == 1){
-        printf("There are none/no more.");
+    if(a<21){
+        printf("There are none.");
     }
+    return zero;
     }
 }
