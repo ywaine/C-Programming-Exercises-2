@@ -17,8 +17,8 @@ void main() {
 	    do{
 	    int printMultiplicationTable(int isInt);
 		a = printMultiplicationTable(isInt);
+	
 	    	} while (a != 1);
-		
 	}
 		 
 }
@@ -29,6 +29,11 @@ int printMultiplicationTable(int n){
 		{
 			for (int i = 1; i < 10; i++)
 				printf("%d x %d = %d\n", n, i, i * n);
-		return a = 1;
+		a = 1;
+		return a;
+}else{
+    printf("Please select a valid number between 1 & 99");
+    a = 1;
+    return a;
 }
 }
