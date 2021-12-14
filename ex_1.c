@@ -18,5 +18,5 @@ int main()
     }
     BMI = (weight / ((height * 0.01) * (height * 0.01)));
     printf("%f", BMI);
-    return 1;
+    return 0;
 }
